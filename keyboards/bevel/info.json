@@ -1,0 +1,12 @@
+{
+    "keyboard_name": "bevel",
+    "url": "",
+    "maintainer": "gnawman"
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"label": "k00", "x": 0, "y": 0}
+            ]
+        }
+    }
+}
