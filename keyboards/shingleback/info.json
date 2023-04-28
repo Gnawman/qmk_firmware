@@ -1,5 +1,27 @@
 {
+  "manufacturer": "gnawman",
   "keyboard_name": "shingleback",
   "url": "harrymadethis.com",
-  "maintainer": "gnawman"
+  "maintainer": "gnawman",
+  "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true,
+        "encoder": true
+    },
+    "processor": "atmega32u4",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0002",
+        "vid": "0x7178"
+    },
+  "diode_direction": "COL2ROW",
+  "encoder": {
+    "rotary": [
+        { "pin_a": "D3", "pin_b": "D2" }
+    ]
+  }
 }

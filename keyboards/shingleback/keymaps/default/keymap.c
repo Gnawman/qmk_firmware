@@ -3,11 +3,9 @@
 #include <stdio.h>
 
 // L0 layer switches
-#define SPC_SFT     LSFT_T(KC_SPACE)
 #define ENT_LAY1    LT(1,KC_ENT)
-#define TAB_LAY2    LT(2,KC_TAB)
 
-// L0 home row mods
+// home row mods
 #define A_CTL       LCTL_T(KC_A)
 #define O_CTL       LCTL_T(KC_O)
 #define R_GUI       LGUI_T(KC_R)
@@ -57,10 +55,19 @@ enum layer_names {
     L_GAME
 };
 
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [L_BASE] = { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)            },
+    [L_SYMB] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),           ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN)  },
+    [L_NAVG] = { ENCODER_CCW_CW(KC_RIGHT, KC_LEFT),          ENCODER_CCW_CW(KC_UP, KC_DOWN)              },
+    [L_GAME] = { ENCODER_CCW_CW(KC_UP, KC_DOWN),             ENCODER_CCW_CW(KC_RIGHT, KC_LEFT)           },
+};
+#endif
+
 void keyboard_pre_init_user(void) {
     setPinOutput(D5);  // initialize D5 for LED
     setPinOutput(B0);  // initialize B0 for LED
-}
+};
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
