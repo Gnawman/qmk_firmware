@@ -3,8 +3,6 @@
 
 #pragma once
 
-#include "config_common.h"
-
 // configs for split keyboard
 #define USE_SERIAL
 #define SOFT_SERIAL_PIN D3
