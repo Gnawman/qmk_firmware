@@ -1,5 +1,32 @@
 {
+    "manufacturer": "gnawman",
     "keyboard_name": "drazie",
+    "maintainer": "gnawman",
+    "bootloader": "caterina",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true,
+        "encoder": true
+    },
+    "processor": "atmega32u4",
     "url": "harrymadethis.com",
-    "maintainer": "gnawman"
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0003",
+        "vid": "0x7178"
+    },
+    "diode_direction": "COL2ROW",
+    "matrix_pins": {
+        "cols": ["F4", "E6", "B1", "D2"],
+        "rows": ["B0", "D3", "D5", "D4", "D6"]
+    },
+    "encoder": {
+        "rotary": [
+            { "pin_a": "B6", "pin_b": "B2" }
+        ]
+    }
 }

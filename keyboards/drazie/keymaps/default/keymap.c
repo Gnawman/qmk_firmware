@@ -15,21 +15,13 @@
  */
 #include QMK_KEYBOARD_H
 
-// L0 layer switches
+// custom keycode example
+/*
 #define SPC_SFT     LSFT_T(KC_SPACE)
 #define ENT_LAY1    LT(1,KC_ENT)
 #define TAB_LAY2    LT(2,KC_TAB)
+*/
 
-// L0 home row mods
-#define A_CTL       LCTL_T(KC_A)
-#define O_CTL       LCTL_T(KC_O)
-#define R_GUI       LGUI_T(KC_R)
-#define I_GUI       LGUI_T(KC_I)
-#define S_ALT       LALT_T(KC_S)
-#define E_ALT       LALT_T(KC_E)
-#define T_SFT       LSFT_T(KC_T)
-#define N_SFT       LSFT_T(KC_N)
-#define QUOT_CTL    LCTL_T(KC_QUOT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
@@ -66,7 +58,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-// tapping term per key code
+// tapping term per key code example
+/*
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case ENT_LAY1:
@@ -77,6 +70,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM;
     }
 }
+*/
 
 enum layer_names {
     L_BASE,
@@ -87,10 +81,10 @@ enum layer_names {
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [_BASE] = { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)            },
-    [_SYMB] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),           ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN)  },
-    [_NAVG] = { ENCODER_CCW_CW(KC_RIGHT, KC_LEFT),          ENCODER_CCW_CW(KC_UP, KC_DOWN)              },
-    [_GAME] = { ENCODER_CCW_CW(KC_UP, KC_DOWN),             ENCODER_CCW_CW(KC_RIGHT, KC_LEFT)           },
+    [L_BASE] = { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)            },
+    [L_SYMB] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),           ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN)  },
+    [L_NAVG] = { ENCODER_CCW_CW(KC_RIGHT, KC_LEFT),          ENCODER_CCW_CW(KC_UP, KC_DOWN)              },
+    [L_GAME] = { ENCODER_CCW_CW(KC_UP, KC_DOWN),             ENCODER_CCW_CW(KC_RIGHT, KC_LEFT)           },
 };
 #endif
 
@@ -99,13 +93,6 @@ bool dip_switch_update_user(uint8_t index, bool active) {
         case 0: {
             if (active) {
                 tap_code(KC_A);
-            } else {
-
-            }
-        }
-        case 1: {
-            if (active) {
-                tap_code(KC_B);
             } else {
 
             }
