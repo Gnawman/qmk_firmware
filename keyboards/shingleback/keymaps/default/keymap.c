@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_7,    KC_8,    KC_9,     _______,                      KC_LBRC, KC_SCLN, KC_SLSH, KC_BSLS,
              KC_4,    KC_5,    KC_6,     KC_0,                         KC_RBRC, KC_COMM, KC_DOT,  KC_MINS,
     KC_BSPC, KC_1,    KC_2,    KC_3,                                           KC_LPRN, KC_RPRN, KC_EQL,    QUOT_CTL,
-    KC_DEL,                    _______,  _______, KC_BTN1,    _______, _______, _______,                    KC_GRV
+    KC_DEL,                    _______,  _______, _______,    _______, _______, _______,                    KC_GRV
   ),
 
   [2] = LAYOUT(
@@ -63,6 +63,22 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [L_GAME] = { ENCODER_CCW_CW(KC_UP, KC_DOWN),             ENCODER_CCW_CW(KC_RIGHT, KC_LEFT)           },
 };
 #endif
+
+bool dip_switch_update_user(uint8_t index, bool active) {
+    switch (index) {
+        case 0: {
+            if (active) {
+                tap_code(KC_A);
+            } else { }
+        }
+        case 1: {
+            if (active) {
+                tap_code(KC_B);
+            } else { }
+        }
+    }
+    return true;
+};
 
 void keyboard_pre_init_user(void) {
     setPinOutput(D5);  // initialize D5 for LED

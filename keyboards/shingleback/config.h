@@ -8,6 +8,8 @@
 #define MATRIX_ROW_PINS { B1, B3, B2, B6 }
 #define MATRIX_COL_PINS { D1, D0, D4, C6, D7, E6, B4, B5 }
 
+#define DIP_SWITCH_PINS { F4, F7 }
+
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
 

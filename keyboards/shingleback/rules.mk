@@ -11,6 +11,7 @@ BOOTLOADER = caterina
 EXTRAFLAGS += -flto
 
 STENO_ENABLE = yes
+DIP_SWITCH_ENABLE = yes
 
 SLEEP_LED_ENABLE = no   # Breathing sleep LED during USB suspend
 BACKLIGHT_ENABLE = no  # Enable keyboard backlight functionality
