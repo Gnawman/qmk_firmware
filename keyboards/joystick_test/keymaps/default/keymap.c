@@ -4,7 +4,6 @@
 #include QMK_KEYBOARD_H
 #include "quantum.h"
 #include "analog.h"
-//#include "pointing_device.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
@@ -27,15 +26,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
-    mouse_report.x = 50 * mouse_report.x/100;
-    mouse_report.y = 50 * mouse_report.y/100;
+    mouse_report.x = joystick_read_axis(0);
+    mouse_report.y = joystick_read_axis(1);
     return mouse_report;
 };
 
 
-/*
 joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
     [0] = JOYSTICK_AXIS_IN(F5, 1023, 512, 0),
     [1] = JOYSTICK_AXIS_IN(F4, 0, 512, 1023)
 };
-*/
