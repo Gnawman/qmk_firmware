@@ -26,8 +26,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
-    mouse_report.x = joystick_read_axis(0);
-    mouse_report.y = joystick_read_axis(1);
+    mouse_report.x = joystick_read_axis(0)/100;
+    mouse_report.y = joystick_read_axis(1)/100;
     return mouse_report;
 };
 
