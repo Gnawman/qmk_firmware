@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT(
              KC_1,   KC_2,   KC_3,     KC_4,                         _______, _______, _______, _______,
-             KC_Q,   KC_E,   KC_F,     KC_SPC,                       _______, _______, _______, _______,
+             KC_Q,   KC_E,   KC_SPC,   KC_F,                         _______, _______, _______, _______,
     KC_LSFT, KC_C,   KC_V,   KC_R,                                            _______, _______, _______,  _______,
     KC_LCTL,                 KC_ESC,   KC_ENT,  KC_TAB,     _______, _______, _______,                    TG(3)
   )
@@ -54,25 +54,21 @@ enum layer_names {
 };
 
 #if defined(ENCODER_MAP_ENABLE)
-const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [L_BASE] = { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)            },
-    [L_SYMB] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),           ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN)  },
-    [L_NAVG] = { ENCODER_CCW_CW(KC_RIGHT, KC_LEFT),          ENCODER_CCW_CW(KC_UP, KC_DOWN)              },
-    [L_GAME] = { ENCODER_CCW_CW(KC_UP, KC_DOWN),             ENCODER_CCW_CW(KC_RIGHT, KC_LEFT)           },
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][1] = {
+    [L_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)   },
+    [L_SYMB] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)   },
+    [L_NAVG] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)   },
+    [L_GAME] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)   },
 };
 #endif
 
 bool dip_switch_update_user(uint8_t index, bool active) {
     switch (index) {
         case 0: {
-            if (active) {
-                tap_code(KC_A);
-            } else { }
+            if (active) { tap_code16(KC_MPLY); } else { }
         }
         case 1: {
-            if (active) {
-                tap_code(KC_B);
-            } else { }
+            if (active) { tap_code16(KC_MUTE); } else { }
         }
     }
     return true;
