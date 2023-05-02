@@ -29,13 +29,9 @@
 #define MATRIX_ROW_PINS { D2, D1, D0, D4, B1 }
 #define MATRIX_COL_PINS { C6, D7, E6, B4, B5, F4, F5, F6, F7 }
 
-/*rotary encoder*/
-#define ENCODERS_PAD_A { B6 }
-#define ENCODERS_PAD_B { B2 }
-#define ENCODER_RESOLUTION 2
-
 // Connects each switch in the dip switch to the GPIO pin of the MCU
 #define DIP_SWITCH_PINS { B3 }
+#define DIP_SWITCH_PINS_RIGHT { B3 }
 
 // Tapdance prefs
 #define TAPPING_TERM 300
