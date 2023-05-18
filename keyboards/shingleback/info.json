@@ -3,14 +3,14 @@
   "keyboard_name": "shingleback",
   "url": "harrymadethis.com",
   "maintainer": "gnawman",
+  "bootloader": "caterina",
   "features": {
         "bootmagic": true,
         "command": false,
         "console": false,
         "extrakey": true,
         "mousekey": true,
-        "nkro": true,
-        "encoder": true
+        "nkro": true
     },
     "processor": "atmega32u4",
     "usb": {
