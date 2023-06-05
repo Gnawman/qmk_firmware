@@ -54,11 +54,11 @@ enum layer_names {
 };
 
 #if defined(ENCODER_MAP_ENABLE)
-const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][1] = {
+const uint16_t PROGMEM encoder_map[][1][2] = {
     [L_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)   },
     [L_SYMB] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)   },
     [L_NAVG] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)   },
-    [L_GAME] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)   },
+    [L_GAME] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)   }
 };
 #endif
 

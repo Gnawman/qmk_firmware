@@ -10,6 +10,11 @@
 
 #define DIP_SWITCH_PINS { F4, F7 }
 
+#define ENCODERS_PAD_A { D3 }
+#define ENCODERS_PAD_B { D2 }
+
+#define ENCODER_RESOLUTION 4
+
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
 
