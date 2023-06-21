@@ -5,7 +5,7 @@
 #define MATRIX_COLS 8
 
 /* key matrix pins */
-#define MATRIX_ROW_PINS { D1, D7, E6, B4, B5 }
+#define MATRIX_ROW_PINS { C6, D7, E6, B4, B5 }
 #define MATRIX_COL_PINS { B1, B3, B2, B6, F4, F5, F6, F7 }
 
 #define ENCODERS_PAD_A { D3 }

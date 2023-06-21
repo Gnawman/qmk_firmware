@@ -92,10 +92,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             break;
         case L_STNO:
             writePinLow(B0);
-            writePinLow(D5);
+            writePinHigh(D5);
             break;
         case L_GAME:
-            writePinLow(B0);
+            writePinHigh(B0);
             writePinLow(D5);
             break;
     }
