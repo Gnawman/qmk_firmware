@@ -4,12 +4,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT(
 	     JS_0,   DM_REC1, TG(1), DM_PLY1,   JS_1,
     JS_2,     JS_3,                    JS_4,     JS_5,
-		 JS_6,         JS_7, JS_8,          JS_7
+		 JS_6,         JS_7, JS_8,          JS_9
 	),
 	[1] = LAYOUT(
 	     JS_0,   DM_REC1, TG(1), DM_PLY1,   JS_1,
     JS_2,     JS_3,                    JS_4,     JS_5,
-		 JS_6,         JS_7, JS_8,          JS_7
+		 JS_6,         JS_7, JS_8,          JS_9
 	)
 };
 
