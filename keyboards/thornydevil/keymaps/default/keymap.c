@@ -36,15 +36,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case JS_UP:
             joystick_set_axis(1, 127);
+            joystick_status.status |= JS_UPDATED;
             return false;
         case JS_DN:
             joystick_set_axis(1, -127);
+            joystick_status.status |= JS_UPDATED;
             return false;
         case JS_LF:
             joystick_set_axis(0, -127);
+            joystick_status.status |= JS_UPDATED;
             return false;
         case JS_RT:
             joystick_set_axis(0, 127);
+            joystick_status.status |= JS_UPDATED;
             return false;
     }
     return true;
