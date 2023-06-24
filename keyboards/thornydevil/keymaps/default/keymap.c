@@ -1,5 +1,13 @@
 #include QMK_KEYBOARD_H
 
+//defining the custom joystick buttons
+enum custom_keycodes {
+    JS_UP = SAFE_RANGE,
+    JS_DN,
+    JS_LF,
+    JS_RT
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT(
 	     JS_0,   DM_REC1, TG(1), DM_PLY1,   JS_1,
@@ -18,16 +26,8 @@ enum layer_names {
     L_JOYS
 };
 
-//defining the custom joystick buttons
-enum custom_keycodes {
-    JS_UP = SAFE_RANGE,
-    JS_DN,
-    JS_LF,
-    JS_RT
-}
-
 //setting up virtual joystick
-joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
+joystick_config_t joystick_axis[JOYSTICK_AXIS_COUNT] = {
     JOYSTICK_AXIS_VIRTUAL,
     JOYSTICK_AXIS_VIRTUAL
 };
@@ -48,7 +48,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
     }
     return true;
-}
+};
 
 void keyboard_pre_init_user(void) {
     setPinOutput(D5);  // initialize D5 for LED
