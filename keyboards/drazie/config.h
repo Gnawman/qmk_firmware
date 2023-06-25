@@ -31,7 +31,6 @@
 
 // Connects each switch in the dip switch to the GPIO pin of the MCU
 #define DIP_SWITCH_PINS { B3 }
-#define DIP_SWITCH_PINS_RIGHT { B3 }
 
 // Tapdance prefs
 #define TAPPING_TERM 300
