@@ -20,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_W,    KC_F,    KC_P,    KC_B,                           KC_J,    KC_L,    KC_U,    KC_Y,
     A_CTL,   R_GUI,   S_ALT,   KC_T,    KC_G,                           KC_M,    KC_N,    E_ALT,   I_GUI,   O_CTL,
     KC_Q,    KC_X,    KC_C,    KC_D,    KC_MPLY,                                 KC_H,    KC_K,    KC_V,    KC_Z,
-    KC_NO,   TG(4),   TG(3),   MO(2),   ENT_LAY1, KC_LSFT,     KC_SPC,  KC_TAB,  MO(2)
+    KC_NO,   TG(4),   TG(3),   MO(2),   KC_LSFT, ENT_LAY1,      KC_TAB, KC_SPC,  MO(2)
   ),
 
   [1] = LAYOUT(
@@ -62,7 +62,7 @@ enum layer_names {
 };
 
 #if defined(ENCODER_MAP_ENABLE)
-const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+const uint16_t PROGMEM encoder_map[][1][2] = {
     [L_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [L_SYMB] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [L_NAVG] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
