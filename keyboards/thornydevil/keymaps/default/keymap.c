@@ -10,14 +10,14 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT(
-	     JS_0,   DM_REC1, TG(1), DM_PLY1,   JS_1,
-    JS_2,     JS_3,                    JS_4,     JS_5,
-		 JS_6,         JS_7, JS_8,          JS_9
+	     KC_UP,   DM_REC1, TG(1), DM_PLY1,   KC_B,
+    KC_LEFT, KC_RIGHT,                    KC_A, KC_R,
+		 KC_DOWN,         KC_C, KC_T,        KC_L
 	),
 	[1] = LAYOUT(
-	     JS_UP,   DM_REC1, TG(1), DM_PLY1,   JS_1,
-    JS_LF,    JS_RT,                    JS_4,     JS_5,
-		 JS_DN,         JS_7, JS_8,          JS_9
+	     JS_UP,   DM_REC1, TG(1), DM_PLY1,   JS_2,
+    JS_LF,    JS_RT,                    JS_1,     JS_4,
+		 JS_DN,         JS_5, JS_6,          JS_3
 	)
 };
 
@@ -36,19 +36,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case JS_UP:
             joystick_set_axis(1, 127);
-            joystick_status.status |= JS_UPDATED;
             return false;
         case JS_DN:
             joystick_set_axis(1, -127);
-            joystick_status.status |= JS_UPDATED;
             return false;
         case JS_LF:
             joystick_set_axis(0, -127);
-            joystick_status.status |= JS_UPDATED;
             return false;
         case JS_RT:
             joystick_set_axis(0, 127);
-            joystick_status.status |= JS_UPDATED;
             return false;
     }
     return true;

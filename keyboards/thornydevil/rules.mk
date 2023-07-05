@@ -13,6 +13,7 @@ EXTRAFLAGS += -flto
 JOYSTICK_ENABLE = yes
 JOYSTICK_DRIVER = digital
 DYNAMIC_MACRO_ENABLE = yes
+BOOTMAGIC_ENABLE = yes
 
 SLEEP_LED_ENABLE = no   # Breathing sleep LED during USB suspend
 BACKLIGHT_ENABLE = no  # Enable keyboard backlight functionality
