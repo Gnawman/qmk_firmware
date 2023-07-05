@@ -61,6 +61,16 @@ enum layer_names {
     L_GAME
 };
 
+// tapping term per key code
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case ENT_LAY1:
+            return 180;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][1][2] = {
     [L_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
