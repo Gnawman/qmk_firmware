@@ -2,9 +2,6 @@
 #include "keymap_steno.h"
 #include <stdio.h>
 
-// L0 layer switches
-#define ENT_LAY1    LT(1,KC_ENT)
-
 // home row mods
 #define A_CTL       LCTL_T(KC_A)
 #define O_CTL       LCTL_T(KC_O)
@@ -20,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_W,    KC_F,    KC_P,    KC_B,                           KC_J,    KC_L,    KC_U,    KC_Y,
     A_CTL,   R_GUI,   S_ALT,   KC_T,    KC_G,                           KC_M,    KC_N,    E_ALT,   I_GUI,   O_CTL,
     KC_Q,    KC_X,    KC_C,    KC_D,    KC_MPLY,                                 KC_H,    KC_K,    KC_V,    KC_Z,
- G(S(KC_S)), TG(4),   TG(3),   MO(2),   KC_LSFT, ENT_LAY1,      KC_TAB, KC_SPC,  MO(2)
+ G(S(KC_S)), TG(4),   TG(3),   KC_ENT,  KC_LSFT, MO(1),         KC_TAB, KC_SPC,  MO(2)
   ),
 
   [1] = LAYOUT(
@@ -48,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_1,    KC_2,    KC_3,    KC_4,                           _______, _______, _______, _______,
     KC_LSFT, KC_Q,    KC_E,    KC_SPC,  KC_F,                           _______, _______, _______, _______, _______,
     KC_LCTL, KC_C,    KC_V,    KC_R,    KC_MPLY,                                 _______, _______, _______, _______,
- G(S(KC_S)), TG(4),   TG(3),   KC_ESC,  KC_I,     KC_ENT,      _______, _______, _______
+ G(S(KC_S)), TG(4),   TG(3),   KC_ENT,  KC_I,     KC_ESC,      _______, _______, _______
   )
 
 };
