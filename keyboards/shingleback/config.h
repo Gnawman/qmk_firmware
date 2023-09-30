@@ -12,7 +12,6 @@
 
 #define TAPPING_TERM 400
 #define TAPPING_TERM_PER_KEY
-#define IGNORE_MOD_TAP_INTERRUPT
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
