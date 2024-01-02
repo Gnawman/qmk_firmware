@@ -3,7 +3,7 @@
     "keyboard_name": "skink",
     "maintainer": "gnawman",
     "bootloader": "caterina",
-    "diode_direction": "COL2ROW",
+    "diode_direction": "ROW2COL",
     "features": {
         "bootmagic": false,
         "command": false,
